@@ -1,0 +1,19 @@
+{% include "../layout/page.html" %}
+
+{% load i18n %}
+
+{% block content %}
+    {% csrf_token %}
+    <h4>{% trans 'Logged o  ut' %}</h4>
+
+    <p>
+        {% trans 'Thanks for spending some quality time with the site today.' %}
+    </p>
+
+    <p>
+        <center>
+          <a href="{% url 'login' %}" style="font-size: 25;">{% trans 'Log in again' %}</a>
+        <center>
+    </p>
+
+{% endblock %}

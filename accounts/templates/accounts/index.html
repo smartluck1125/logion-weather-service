@@ -1,0 +1,15 @@
+{% load static %}
+{% load crispy_forms_tags %}
+{% include "../layout/page.html" %}
+
+{% load i18n %}
+
+{% block content %}
+    
+    {% if user.is_authenticated %}
+        <center><h1>welcome back {{user.username}}!</h1></center>
+    {% else %}
+        <center><h1>log in, plz . . .</h1></center> 
+    {% endif %}
+
+{% endblock %}
